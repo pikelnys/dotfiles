@@ -1,23 +1,29 @@
-[user]
-  name = scyclow
-  email = spike716@gmail.com
 [pull]
   rebase = true
 [push]
   default = upstream
+[merge]
+  tool = vimdiff
 [color]
   diff = auto
   status = auto
   branch = auto
-[filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
 [alias]
   ci = commit
   co = checkout
+  cp = cherry-pick
+  st = status
   s  = status
+  su = submodule update
+  br = branch
   b  = branch
   d  = diff
   ds = diff --staged
-  l  = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
   ln = log --name-status
+  l  = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+  la = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --all --graph
+  rsh = reset --soft HEAD^
+  rim = rebase -i master
+[user]
+	name = Steve Pikelny
+	email = pikelnys@nextcapital.com
